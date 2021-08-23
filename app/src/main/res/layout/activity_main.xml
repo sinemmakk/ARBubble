@@ -6,12 +6,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/background">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
+        android:textColor="#292E6C"
         android:textSize="25dp"
         android:textAlignment="center"
         android:text="Konuşma balonuna yazmak istediğiniz yazıyı giriniz:"
@@ -22,8 +23,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="15"
+        android:backgroundTint="#292E6C"
+        android:textColor="#292E6C"
         android:layout_marginTop="15dp"
          />
+<LinearLayout
+    android:layout_marginTop="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <ImageButton
+        android:id="@+id/imgbtn_speech"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/speechbubble"></ImageButton>
+    <ImageButton
+        android:id="@+id/imgbtn_thought"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/thoughtbubble"></ImageButton>
+</LinearLayout>
+
 
     <Button
         android:id="@+id/button"
