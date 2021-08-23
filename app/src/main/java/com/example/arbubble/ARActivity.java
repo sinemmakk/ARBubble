@@ -114,12 +114,12 @@ public class ARActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (selected){
-                    iv_flower.setBackgroundColor(Color.TRANSPARENT);
+                    iv_bee.setBackgroundColor(Color.TRANSPARENT);
                     selected = false;
                     selected_item = 0;
                 }else{
                     selected_item = 2;
-                    iv_flower.setBackgroundColor(Color.parseColor("#F38181"));
+                    iv_bee.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
             }
@@ -128,12 +128,12 @@ public class ARActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (selected){
-                    iv_flower.setBackgroundColor(Color.TRANSPARENT);
+                    iv_boom.setBackgroundColor(Color.TRANSPARENT);
                     selected = false;
                     selected_item = 0;
                 }else{
                     selected_item = 3;
-                    iv_flower.setBackgroundColor(Color.parseColor("#F38181"));
+                    iv_boom.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
             }
@@ -142,12 +142,12 @@ public class ARActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (selected){
-                    iv_flower.setBackgroundColor(Color.TRANSPARENT);
+                    iv_cool.setBackgroundColor(Color.TRANSPARENT);
                     selected = false;
                     selected_item = 0;
                 }else{
                     selected_item = 4;
-                    iv_flower.setBackgroundColor(Color.parseColor("#F38181"));
+                    iv_cool.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
             }
@@ -156,12 +156,12 @@ public class ARActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (selected){
-                    iv_flower.setBackgroundColor(Color.TRANSPARENT);
+                    iv_dinasour.setBackgroundColor(Color.TRANSPARENT);
                     selected = false;
                     selected_item = 0;
                 }else{
                     selected_item = 5;
-                    iv_flower.setBackgroundColor(Color.parseColor("#F38181"));
+                    iv_dinasour.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
             }
@@ -170,12 +170,12 @@ public class ARActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (selected){
-                    iv_flower.setBackgroundColor(Color.TRANSPARENT);
+                    iv_haha.setBackgroundColor(Color.TRANSPARENT);
                     selected = false;
                     selected_item = 0;
                 }else{
                     selected_item = 6;
-                    iv_flower.setBackgroundColor(Color.parseColor("#F38181"));
+                    iv_haha.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
             }
@@ -184,159 +184,173 @@ public class ARActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (selected){
-                    iv_flower.setBackgroundColor(Color.TRANSPARENT);
+                    iv_just_be_happy.setBackgroundColor(Color.TRANSPARENT);
                     selected = false;
                     selected_item = 0;
                 }else{
-                    selected_item = 1;
-                    iv_flower.setBackgroundColor(Color.parseColor("#F38181"));
+                    selected_item = 7;
+                    iv_just_be_happy.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
             }
         });
-        iv_flower.setOnClickListener(new View.OnClickListener() {
+        iv_leaf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (selected){
-                    iv_flower.setBackgroundColor(Color.TRANSPARENT);
+                    iv_leaf.setBackgroundColor(Color.TRANSPARENT);
                     selected = false;
                     selected_item = 0;
                 }else{
-                    selected_item = 1;
-                    iv_flower.setBackgroundColor(Color.parseColor("#F38181"));
+                    selected_item = 8;
+                    iv_leaf.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
             }
         });
-        iv_flower.setOnClickListener(new View.OnClickListener() {
+        iv_music.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (selected){
-                    iv_flower.setBackgroundColor(Color.TRANSPARENT);
+                    iv_music.setBackgroundColor(Color.TRANSPARENT);
                     selected = false;
                     selected_item = 0;
                 }else{
-                    selected_item = 1;
-                    iv_flower.setBackgroundColor(Color.parseColor("#F38181"));
+                    selected_item = 9;
+                    iv_music.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
             }
         });
-        iv_flower.setOnClickListener(new View.OnClickListener() {
+        iv_nice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (selected){
-                    iv_flower.setBackgroundColor(Color.TRANSPARENT);
+                    iv_nice.setBackgroundColor(Color.TRANSPARENT);
                     selected = false;
                     selected_item = 0;
                 }else{
-                    selected_item = 1;
-                    iv_flower.setBackgroundColor(Color.parseColor("#F38181"));
+                    selected_item = 9;
+                    iv_nice.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
             }
-        });iv_flower.setOnClickListener(new View.OnClickListener() {
+        });iv_okie_dokie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (selected){
-                    iv_flower.setBackgroundColor(Color.TRANSPARENT);
+                    iv_okie_dokie.setBackgroundColor(Color.TRANSPARENT);
                     selected = false;
                     selected_item = 0;
                 }else{
-                    selected_item = 1;
-                    iv_flower.setBackgroundColor(Color.parseColor("#F38181"));
+                    selected_item = 10;
+                    iv_okie_dokie.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
             }
         });
-        iv_flower.setOnClickListener(new View.OnClickListener() {
+        iv_ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (selected){
-                    iv_flower.setBackgroundColor(Color.TRANSPARENT);
+                    iv_ok.setBackgroundColor(Color.TRANSPARENT);
                     selected = false;
                     selected_item = 0;
                 }else{
-                    selected_item = 1;
-                    iv_flower.setBackgroundColor(Color.parseColor("#F38181"));
+                    selected_item = 11;
+                    iv_ok.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
             }
-        });iv_flower.setOnClickListener(new View.OnClickListener() {
+        });iv_omg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (selected){
-                    iv_flower.setBackgroundColor(Color.TRANSPARENT);
+                    iv_omg.setBackgroundColor(Color.TRANSPARENT);
                     selected = false;
                     selected_item = 0;
                 }else{
-                    selected_item = 1;
-                    iv_flower.setBackgroundColor(Color.parseColor("#F38181"));
+                    selected_item = 12;
+                    iv_omg.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
             }
-        });iv_flower.setOnClickListener(new View.OnClickListener() {
+        });iv_oops.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (selected){
-                    iv_flower.setBackgroundColor(Color.TRANSPARENT);
+                    iv_oops.setBackgroundColor(Color.TRANSPARENT);
                     selected = false;
                     selected_item = 0;
                 }else{
-                    selected_item = 1;
-                    iv_flower.setBackgroundColor(Color.parseColor("#F38181"));
+                    selected_item = 13;
+                    iv_oops.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
             }
-        });iv_flower.setOnClickListener(new View.OnClickListener() {
+        });iv_price_tag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (selected){
-                    iv_flower.setBackgroundColor(Color.TRANSPARENT);
+                    iv_price_tag.setBackgroundColor(Color.TRANSPARENT);
                     selected = false;
                     selected_item = 0;
                 }else{
-                    selected_item = 1;
-                    iv_flower.setBackgroundColor(Color.parseColor("#F38181"));
+                    selected_item = 14;
+                    iv_price_tag.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
             }
-        });iv_flower.setOnClickListener(new View.OnClickListener() {
+        });iv_say_no.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (selected){
-                    iv_flower.setBackgroundColor(Color.TRANSPARENT);
+                    iv_say_no.setBackgroundColor(Color.TRANSPARENT);
                     selected = false;
                     selected_item = 0;
                 }else{
-                    selected_item = 1;
-                    iv_flower.setBackgroundColor(Color.parseColor("#F38181"));
+                    selected_item = 15;
+                    iv_say_no.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
             }
-        });iv_flower.setOnClickListener(new View.OnClickListener() {
+        });iv_ufo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (selected){
-                    iv_flower.setBackgroundColor(Color.TRANSPARENT);
+                    iv_ufo.setBackgroundColor(Color.TRANSPARENT);
                     selected = false;
                     selected_item = 0;
                 }else{
-                    selected_item = 1;
-                    iv_flower.setBackgroundColor(Color.parseColor("#F38181"));
+                    selected_item = 16;
+                    iv_ufo.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
             }
-        });iv_flower.setOnClickListener(new View.OnClickListener() {
+        });iv_well_done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (selected){
-                    iv_flower.setBackgroundColor(Color.TRANSPARENT);
+                    iv_well_done.setBackgroundColor(Color.TRANSPARENT);
                     selected = false;
                     selected_item = 0;
                 }else{
-                    selected_item = 1;
-                    iv_flower.setBackgroundColor(Color.parseColor("#F38181"));
+                    selected_item = 17;
+                    iv_well_done.setBackgroundColor(Color.parseColor("#F38181"));
+                    selected = true;
+                }
+            }
+        });
+        iv_wow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (selected){
+                    iv_wow.setBackgroundColor(Color.TRANSPARENT);
+                    selected = false;
+                    selected_item = 0;
+                }else{
+                    selected_item = 18;
+                    iv_wow.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
             }
@@ -416,6 +430,16 @@ public class ARActivity extends AppCompatActivity {
                         });
                 break;
                 case 3:
+                    ViewRenderable.builder()
+                        .setView(fragment.getContext(), R.layout.ar_image)
+                        .build()
+                        .thenAccept(it -> {
+                            it.setShadowCaster(false);
+                            it.setShadowReceiver(false);
+                            ImageView iv = it.getView().findViewById(R.id.iv_image);
+                            iv.setImageResource(R.drawable.);
+                            addControlsToScene(fragment, it, anchor);
+                        });
 
                     break;
                 case 4:
@@ -440,6 +464,16 @@ public class ARActivity extends AppCompatActivity {
                 case 12:
                 break;
                 case 13:
+                break;
+            case 14:
+                break;
+            case 15:
+                break;
+            case 16:
+                break;
+            case 17:
+                break;
+            case 18:
                 break;
         }
 
