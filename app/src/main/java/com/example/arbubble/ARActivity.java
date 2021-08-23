@@ -230,7 +230,7 @@ public class ARActivity extends AppCompatActivity {
                     selected = false;
                     selected_item = 0;
                 }else{
-                    selected_item = 9;
+                    selected_item = 10;
                     iv_nice.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
@@ -243,7 +243,7 @@ public class ARActivity extends AppCompatActivity {
                     selected = false;
                     selected_item = 0;
                 }else{
-                    selected_item = 10;
+                    selected_item = 11;
                     iv_okie_dokie.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
@@ -257,7 +257,7 @@ public class ARActivity extends AppCompatActivity {
                     selected = false;
                     selected_item = 0;
                 }else{
-                    selected_item = 11;
+                    selected_item = 12;
                     iv_ok.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
@@ -270,7 +270,7 @@ public class ARActivity extends AppCompatActivity {
                     selected = false;
                     selected_item = 0;
                 }else{
-                    selected_item = 12;
+                    selected_item = 13;
                     iv_omg.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
@@ -283,7 +283,7 @@ public class ARActivity extends AppCompatActivity {
                     selected = false;
                     selected_item = 0;
                 }else{
-                    selected_item = 13;
+                    selected_item = 14;
                     iv_oops.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
@@ -296,7 +296,7 @@ public class ARActivity extends AppCompatActivity {
                     selected = false;
                     selected_item = 0;
                 }else{
-                    selected_item = 14;
+                    selected_item = 15;
                     iv_price_tag.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
@@ -309,7 +309,7 @@ public class ARActivity extends AppCompatActivity {
                     selected = false;
                     selected_item = 0;
                 }else{
-                    selected_item = 15;
+                    selected_item = 16;
                     iv_say_no.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
@@ -322,7 +322,7 @@ public class ARActivity extends AppCompatActivity {
                     selected = false;
                     selected_item = 0;
                 }else{
-                    selected_item = 16;
+                    selected_item = 17;
                     iv_ufo.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
@@ -335,7 +335,7 @@ public class ARActivity extends AppCompatActivity {
                     selected = false;
                     selected_item = 0;
                 }else{
-                    selected_item = 17;
+                    selected_item = 18;
                     iv_well_done.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
@@ -349,7 +349,7 @@ public class ARActivity extends AppCompatActivity {
                     selected = false;
                     selected_item = 0;
                 }else{
-                    selected_item = 18;
+                    selected_item = 19;
                     iv_wow.setBackgroundColor(Color.parseColor("#F38181"));
                     selected = true;
                 }
@@ -437,43 +437,220 @@ public class ARActivity extends AppCompatActivity {
                             it.setShadowCaster(false);
                             it.setShadowReceiver(false);
                             ImageView iv = it.getView().findViewById(R.id.iv_image);
-                            iv.setImageResource(R.drawable.);
+                            iv.setImageResource(R.drawable.boom);
                             addControlsToScene(fragment, it, anchor);
                         });
 
                     break;
                 case 4:
+                    ViewRenderable.builder()
+                            .setView(fragment.getContext(), R.layout.ar_image)
+                            .build()
+                            .thenAccept(it -> {
+                                it.setShadowCaster(false);
+                                it.setShadowReceiver(false);
+                                ImageView iv = it.getView().findViewById(R.id.iv_image);
+                                iv.setImageResource(R.drawable.cool);
+                                addControlsToScene(fragment, it, anchor);
+                            });
 
-                break;
+
+                    break;
                 case 5:
+                    ViewRenderable.builder()
+                            .setView(fragment.getContext(), R.layout.ar_image)
+                            .build()
+                            .thenAccept(it -> {
+                                it.setShadowCaster(false);
+                                it.setShadowReceiver(false);
+                                ImageView iv = it.getView().findViewById(R.id.iv_image);
+                                iv.setImageResource(R.drawable.dinasour);
+                                addControlsToScene(fragment, it, anchor);
+                            });
 
-                break;
+
+                    break;
 
                 case 6:
-                break;
-                case 7:
-                break;
+                    ViewRenderable.builder()
+                            .setView(fragment.getContext(), R.layout.ar_image)
+                            .build()
+                            .thenAccept(it -> {
+                                it.setShadowCaster(false);
+                                it.setShadowReceiver(false);
+                                ImageView iv = it.getView().findViewById(R.id.iv_image);
+                                iv.setImageResource(R.drawable.haha);
+                                addControlsToScene(fragment, it, anchor);
+                            });
+
+                    break;
+                case 7:    ViewRenderable.builder()
+                        .setView(fragment.getContext(), R.layout.ar_image)
+                        .build()
+                        .thenAccept(it -> {
+                            it.setShadowCaster(false);
+                            it.setShadowReceiver(false);
+                            ImageView iv = it.getView().findViewById(R.id.iv_image);
+                            iv.setImageResource(R.drawable.just_be_happy);
+                            addControlsToScene(fragment, it, anchor);
+                        });
+
+                    break;
                 case 8:
-                break;
+                    ViewRenderable.builder()
+                            .setView(fragment.getContext(), R.layout.ar_image)
+                            .build()
+                            .thenAccept(it -> {
+                                it.setShadowCaster(false);
+                                it.setShadowReceiver(false);
+                                ImageView iv = it.getView().findViewById(R.id.iv_image);
+                                iv.setImageResource(R.drawable.leaf);
+                                addControlsToScene(fragment, it, anchor);
+                            });
+
+                    break;
                 case 9:
-                break;
+                    ViewRenderable.builder()
+                            .setView(fragment.getContext(), R.layout.ar_image)
+                            .build()
+                            .thenAccept(it -> {
+                                it.setShadowCaster(false);
+                                it.setShadowReceiver(false);
+                                ImageView iv = it.getView().findViewById(R.id.iv_image);
+                                iv.setImageResource(R.drawable.music);
+                                addControlsToScene(fragment, it, anchor);
+                            });
+
+                    break;
                 case 10:
-                break;
+                    ViewRenderable.builder()
+                            .setView(fragment.getContext(), R.layout.ar_image)
+                            .build()
+                            .thenAccept(it -> {
+                                it.setShadowCaster(false);
+                                it.setShadowReceiver(false);
+                                ImageView iv = it.getView().findViewById(R.id.iv_image);
+                                iv.setImageResource(R.drawable.nice);
+                                addControlsToScene(fragment, it, anchor);
+                            });
+
+                    break;
                 case 11:
-                break;
+                    ViewRenderable.builder()
+                            .setView(fragment.getContext(), R.layout.ar_image)
+                            .build()
+                            .thenAccept(it -> {
+                                it.setShadowCaster(false);
+                                it.setShadowReceiver(false);
+                                ImageView iv = it.getView().findViewById(R.id.iv_image);
+                                iv.setImageResource(R.drawable.okie_dokie);
+                                addControlsToScene(fragment, it, anchor);
+                            });
+
+                    break;
                 case 12:
-                break;
+                    ViewRenderable.builder()
+                            .setView(fragment.getContext(), R.layout.ar_image)
+                            .build()
+                            .thenAccept(it -> {
+                                it.setShadowCaster(false);
+                                it.setShadowReceiver(false);
+                                ImageView iv = it.getView().findViewById(R.id.iv_image);
+                                iv.setImageResource(R.drawable.ok);
+                                addControlsToScene(fragment, it, anchor);
+                            });
+
+                    break;
                 case 13:
-                break;
+                    ViewRenderable.builder()
+                            .setView(fragment.getContext(), R.layout.ar_image)
+                            .build()
+                            .thenAccept(it -> {
+                                it.setShadowCaster(false);
+                                it.setShadowReceiver(false);
+                                ImageView iv = it.getView().findViewById(R.id.iv_image);
+                                iv.setImageResource(R.drawable.omg);
+                                addControlsToScene(fragment, it, anchor);
+                            });
+
+                    break;
             case 14:
+                ViewRenderable.builder()
+                        .setView(fragment.getContext(), R.layout.ar_image)
+                        .build()
+                        .thenAccept(it -> {
+                            it.setShadowCaster(false);
+                            it.setShadowReceiver(false);
+                            ImageView iv = it.getView().findViewById(R.id.iv_image);
+                            iv.setImageResource(R.drawable.oops);
+                            addControlsToScene(fragment, it, anchor);
+                        });
+
                 break;
             case 15:
+                ViewRenderable.builder()
+                        .setView(fragment.getContext(), R.layout.ar_image)
+                        .build()
+                        .thenAccept(it -> {
+                            it.setShadowCaster(false);
+                            it.setShadowReceiver(false);
+                            ImageView iv = it.getView().findViewById(R.id.iv_image);
+                            iv.setImageResource(R.drawable.price_tag);
+                            addControlsToScene(fragment, it, anchor);
+                        });
+
                 break;
             case 16:
+                ViewRenderable.builder()
+                        .setView(fragment.getContext(), R.layout.ar_image)
+                        .build()
+                        .thenAccept(it -> {
+                            it.setShadowCaster(false);
+                            it.setShadowReceiver(false);
+                            ImageView iv = it.getView().findViewById(R.id.iv_image);
+                            iv.setImageResource(R.drawable.say_no);
+                            addControlsToScene(fragment, it, anchor);
+                        });
+
                 break;
             case 17:
+                ViewRenderable.builder()
+                        .setView(fragment.getContext(), R.layout.ar_image)
+                        .build()
+                        .thenAccept(it -> {
+                            it.setShadowCaster(false);
+                            it.setShadowReceiver(false);
+                            ImageView iv = it.getView().findViewById(R.id.iv_image);
+                            iv.setImageResource(R.drawable.ufo);
+                            addControlsToScene(fragment, it, anchor);
+                        });
+
                 break;
             case 18:
+                ViewRenderable.builder()
+                        .setView(fragment.getContext(), R.layout.ar_image)
+                        .build()
+                        .thenAccept(it -> {
+                            it.setShadowCaster(false);
+                            it.setShadowReceiver(false);
+                            ImageView iv = it.getView().findViewById(R.id.iv_image);
+                            iv.setImageResource(R.drawable.well_done);
+                            addControlsToScene(fragment, it, anchor);
+                        });
+
+                break;
+            case 19:
+                ViewRenderable.builder()
+                        .setView(fragment.getContext(), R.layout.ar_image)
+                        .build()
+                        .thenAccept(it -> {
+                            it.setShadowCaster(false);
+                            it.setShadowReceiver(false);
+                            ImageView iv = it.getView().findViewById(R.id.iv_image);
+                            iv.setImageResource(R.drawable.wow);
+                            addControlsToScene(fragment, it, anchor);
+                        });
+
                 break;
         }
 
