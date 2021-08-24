@@ -28,7 +28,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginBottom="20dp"></Button>
 
-    <ScrollView
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
@@ -156,7 +156,7 @@
 
 
 
-    </ScrollView>
+    </HorizontalScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

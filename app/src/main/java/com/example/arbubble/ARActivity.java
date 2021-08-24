@@ -690,7 +690,7 @@ public class ARActivity extends AppCompatActivity {
     private void addControlsToScene(ArFragment arFragment, Renderable renderable, Anchor anchor) {
         //ArSceneView arSceneView = arFragment.getArSceneView();
         //Scene scene = arSceneView.getScene();
-        Vector3 location = new Vector3(0,0,-3);
+        Vector3 location = new Vector3(0,0,-7);
         AnchorNode anchorNode = new AnchorNode(anchor);
         TransformableNode node = new TransformableNode(arFragment.getTransformationSystem());
         node.setRenderable(renderable);

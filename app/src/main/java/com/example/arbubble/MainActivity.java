@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     EditText editText;
     String str;
     ImageButton speech,thought;
-    String bubble;
+    String bubble="no_bubble";
     boolean selected = false;
     private static final int CAMERA_PERMISSION_CODE=100;
     @Override
