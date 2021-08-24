@@ -90,11 +90,37 @@ public class ARActivity extends AppCompatActivity {
             str = "Merhaba";
             bubble = "speech";
         }
-       // setupModel();
 
-        Toast toast = Toast.makeText(ARActivity.this,
-                "Konuşma balonunu koymak için ekrana dokunun", Toast.LENGTH_SHORT);
-        toast.show();
+        if(control==0){
+            Toast toast = Toast.makeText(ARActivity.this,
+                    "Konuşma balonunu koymak için ekrana dokunun", Toast.LENGTH_SHORT);
+            toast.show();
+        }
+
+
+        arFragment.setOnTapArPlaneListener(new BaseArFragment.OnTapArPlaneListener() {
+            @Override
+            public void onTapPlane(HitResult hitResult, Plane plane, MotionEvent motionEvent) {
+                Anchor anchor = hitResult.createAnchor();
+                AnchorNode anchorNode = new AnchorNode(anchor);
+                anchorNode.setParent(arFragment.getArSceneView().getScene());
+                if(control == 0){
+                    placeObject(arFragment, anchorNode);
+                    control++;
+                }
+                if(selected){
+                    createModel(arFragment, anchorNode, selected_item);
+                }
+
+            }
+        });
+
+        btn_photo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                takePhoto();
+            }
+        });
 
         iv_flower.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -235,7 +261,8 @@ public class ARActivity extends AppCompatActivity {
                     selected = true;
                 }
             }
-        });iv_okie_dokie.setOnClickListener(new View.OnClickListener() {
+        });
+        iv_okie_dokie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (selected){
@@ -262,7 +289,8 @@ public class ARActivity extends AppCompatActivity {
                     selected = true;
                 }
             }
-        });iv_omg.setOnClickListener(new View.OnClickListener() {
+        });
+        iv_omg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (selected){
@@ -275,7 +303,8 @@ public class ARActivity extends AppCompatActivity {
                     selected = true;
                 }
             }
-        });iv_oops.setOnClickListener(new View.OnClickListener() {
+        });
+        iv_oops.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (selected){
@@ -288,7 +317,8 @@ public class ARActivity extends AppCompatActivity {
                     selected = true;
                 }
             }
-        });iv_price_tag.setOnClickListener(new View.OnClickListener() {
+        });
+        iv_price_tag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (selected){
@@ -301,7 +331,8 @@ public class ARActivity extends AppCompatActivity {
                     selected = true;
                 }
             }
-        });iv_say_no.setOnClickListener(new View.OnClickListener() {
+        });
+        iv_say_no.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (selected){
@@ -314,7 +345,8 @@ public class ARActivity extends AppCompatActivity {
                     selected = true;
                 }
             }
-        });iv_ufo.setOnClickListener(new View.OnClickListener() {
+        });
+        iv_ufo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (selected){
@@ -327,7 +359,8 @@ public class ARActivity extends AppCompatActivity {
                     selected = true;
                 }
             }
-        });iv_well_done.setOnClickListener(new View.OnClickListener() {
+        });
+        iv_well_done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (selected){
@@ -355,55 +388,9 @@ public class ARActivity extends AppCompatActivity {
                 }
             }
         });
-
-        
-        arFragment.setOnTapArPlaneListener(new BaseArFragment.OnTapArPlaneListener() {
-            @Override
-            public void onTapPlane(HitResult hitResult, Plane plane, MotionEvent motionEvent) {
-                Anchor anchor = hitResult.createAnchor();
-                if(control == 0){
-                    placeObject(arFragment, anchor);
-                    control++;
-                }
-                if(selected){
-                    createModel(arFragment, anchor, selected_item);
-                }
-            }
-        });
-
-
-        //placeObject(arFragment);
-        btn_photo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                takePhoto();
-            }
-        });
-    }
-    /*
-    private void setupModel(){
-        ModelRenderable.builder().setSource(this,R.raw.grave).build().thenAccept(modelRenderable -> {
-            renderable_grave = modelRenderable;
-        }).exceptionally(throwable -> {
-            Toast toast = Toast.makeText(ARActivity.this,
-                    "Unable to load model", Toast.LENGTH_SHORT);
-            toast.show();
-            return null;
-        });
     }
 
-    private void createModel(Anchor anchor){
-        AnchorNode anchorNode = new AnchorNode(anchor);
-        TransformableNode transformableNode = new TransformableNode(arFragment.getTransformationSystem());
-        transformableNode.setParent(anchorNode);
-        transformableNode.setRenderable(renderable_grave);
-        arFragment.getArSceneView().getScene().addChild(transformableNode);
-
-    }
-
-     */
-
-    private void createModel(ArFragment fragment, Anchor anchor, int i){
+    private void createModel(ArFragment fragment, AnchorNode anchor, int i){
         switch (i){
             case 1:
                 ViewRenderable.builder()
@@ -429,8 +416,8 @@ public class ARActivity extends AppCompatActivity {
                             addControlsToScene(fragment, it, anchor);
                         });
                 break;
-                case 3:
-                    ViewRenderable.builder()
+            case 3:
+                ViewRenderable.builder()
                         .setView(fragment.getContext(), R.layout.ar_image)
                         .build()
                         .thenAccept(it -> {
@@ -440,9 +427,8 @@ public class ARActivity extends AppCompatActivity {
                             iv.setImageResource(R.drawable.boom);
                             addControlsToScene(fragment, it, anchor);
                         });
-
-                    break;
-                case 4:
+                break;
+            case 4:
                     ViewRenderable.builder()
                             .setView(fragment.getContext(), R.layout.ar_image)
                             .build()
@@ -453,8 +439,6 @@ public class ARActivity extends AppCompatActivity {
                                 iv.setImageResource(R.drawable.cool);
                                 addControlsToScene(fragment, it, anchor);
                             });
-
-
                     break;
                 case 5:
                     ViewRenderable.builder()
@@ -467,10 +451,7 @@ public class ARActivity extends AppCompatActivity {
                                 iv.setImageResource(R.drawable.dinasour);
                                 addControlsToScene(fragment, it, anchor);
                             });
-
-
                     break;
-
                 case 6:
                     ViewRenderable.builder()
                             .setView(fragment.getContext(), R.layout.ar_image)
@@ -482,9 +463,9 @@ public class ARActivity extends AppCompatActivity {
                                 iv.setImageResource(R.drawable.haha);
                                 addControlsToScene(fragment, it, anchor);
                             });
-
                     break;
-                case 7:    ViewRenderable.builder()
+                case 7:
+                    ViewRenderable.builder()
                         .setView(fragment.getContext(), R.layout.ar_image)
                         .build()
                         .thenAccept(it -> {
@@ -494,7 +475,6 @@ public class ARActivity extends AppCompatActivity {
                             iv.setImageResource(R.drawable.just_be_happy);
                             addControlsToScene(fragment, it, anchor);
                         });
-
                     break;
                 case 8:
                     ViewRenderable.builder()
@@ -507,7 +487,6 @@ public class ARActivity extends AppCompatActivity {
                                 iv.setImageResource(R.drawable.leaf);
                                 addControlsToScene(fragment, it, anchor);
                             });
-
                     break;
                 case 9:
                     ViewRenderable.builder()
@@ -520,7 +499,6 @@ public class ARActivity extends AppCompatActivity {
                                 iv.setImageResource(R.drawable.music);
                                 addControlsToScene(fragment, it, anchor);
                             });
-
                     break;
                 case 10:
                     ViewRenderable.builder()
@@ -533,7 +511,6 @@ public class ARActivity extends AppCompatActivity {
                                 iv.setImageResource(R.drawable.nice);
                                 addControlsToScene(fragment, it, anchor);
                             });
-
                     break;
                 case 11:
                     ViewRenderable.builder()
@@ -546,7 +523,6 @@ public class ARActivity extends AppCompatActivity {
                                 iv.setImageResource(R.drawable.okie_dokie);
                                 addControlsToScene(fragment, it, anchor);
                             });
-
                     break;
                 case 12:
                     ViewRenderable.builder()
@@ -559,7 +535,6 @@ public class ARActivity extends AppCompatActivity {
                                 iv.setImageResource(R.drawable.ok);
                                 addControlsToScene(fragment, it, anchor);
                             });
-
                     break;
                 case 13:
                     ViewRenderable.builder()
@@ -572,7 +547,6 @@ public class ARActivity extends AppCompatActivity {
                                 iv.setImageResource(R.drawable.omg);
                                 addControlsToScene(fragment, it, anchor);
                             });
-
                     break;
             case 14:
                 ViewRenderable.builder()
@@ -585,7 +559,6 @@ public class ARActivity extends AppCompatActivity {
                             iv.setImageResource(R.drawable.oops);
                             addControlsToScene(fragment, it, anchor);
                         });
-
                 break;
             case 15:
                 ViewRenderable.builder()
@@ -598,7 +571,6 @@ public class ARActivity extends AppCompatActivity {
                             iv.setImageResource(R.drawable.price_tag);
                             addControlsToScene(fragment, it, anchor);
                         });
-
                 break;
             case 16:
                 ViewRenderable.builder()
@@ -611,7 +583,6 @@ public class ARActivity extends AppCompatActivity {
                             iv.setImageResource(R.drawable.say_no);
                             addControlsToScene(fragment, it, anchor);
                         });
-
                 break;
             case 17:
                 ViewRenderable.builder()
@@ -624,7 +595,6 @@ public class ARActivity extends AppCompatActivity {
                             iv.setImageResource(R.drawable.ufo);
                             addControlsToScene(fragment, it, anchor);
                         });
-
                 break;
             case 18:
                 ViewRenderable.builder()
@@ -637,7 +607,6 @@ public class ARActivity extends AppCompatActivity {
                             iv.setImageResource(R.drawable.well_done);
                             addControlsToScene(fragment, it, anchor);
                         });
-
                 break;
             case 19:
                 ViewRenderable.builder()
@@ -650,13 +619,11 @@ public class ARActivity extends AppCompatActivity {
                             iv.setImageResource(R.drawable.wow);
                             addControlsToScene(fragment, it, anchor);
                         });
-
                 break;
         }
-
     }
 
-    private void placeObject(ArFragment fragment, Anchor anchor) {
+    private void placeObject(ArFragment fragment, AnchorNode anchor) {
         switch(bubble){
             case "speech":
                 ViewRenderable.builder()
@@ -685,16 +652,11 @@ public class ARActivity extends AppCompatActivity {
         }
     }
 
-    //eski halinde sürüklemeyi dene
-
-    private void addControlsToScene(ArFragment arFragment, Renderable renderable, Anchor anchor) {
-        //ArSceneView arSceneView = arFragment.getArSceneView();
-        //Scene scene = arSceneView.getScene();
-        Vector3 location = new Vector3(0,0,-7);
-        AnchorNode anchorNode = new AnchorNode(anchor);
+    private void addControlsToScene(ArFragment arFragment, Renderable renderable, AnchorNode anchor) {
+        Vector3 location = new Vector3(0,0,-3);
         TransformableNode node = new TransformableNode(arFragment.getTransformationSystem());
         node.setRenderable(renderable);
-        node.setParent(anchorNode);
+        node.setParent(anchor);
         node.setWorldPosition(location);
         arFragment.getArSceneView().getScene().addChild(node);
     }
@@ -754,6 +716,5 @@ public class ARActivity extends AppCompatActivity {
             }
         }, new Handler(handlerThread.getLooper()));
     }
-
 
 }
